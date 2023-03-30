@@ -18,11 +18,11 @@ pipeline {
     // and so forth.
     // It supports Java, JavaScript, Salesforce.com Apex, PLSQL, 
     // Apache Velocity, XML, XSL.
-	  stage('PMD'){
-		  steps{
-			  // sh 'mvn site'
-		  }
-	  }
+	  // stage('PMD'){
+		//   steps{
+		// 	  sh 'mvn site'
+		//   }
+	  // }
     //Code ends for stage PMD
 
     //Code starts for stage Unit Test
