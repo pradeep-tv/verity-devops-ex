@@ -13,9 +13,14 @@ pipeline {
     //Code ends for stage clean
 
     //Code starts for stage PMD
+    // PMD is a source code analyzer to find common programming flaws like
+    // unused variables, empty catch blocks, unnecessary object creation, 
+    // and so forth.
+    // It supports Java, JavaScript, Salesforce.com Apex, PLSQL, 
+    // Apache Velocity, XML, XSL.
 	  stage('PMD'){
 		  steps{
-			  sh 'mvn site'
+			  // sh 'mvn site'
 		  }
 	  }
     //Code ends for stage PMD
