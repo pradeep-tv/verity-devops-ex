@@ -32,6 +32,30 @@ pipeline {
       }
     }
 		//Code ends for stage Unit Test
+
+    //Code starts for stage Code Coverage
+		stage('Code Coverage'){
+      steps{
+        sh 'mvn jacoco:report'
+      }
+    }
+		//Code ends for stage Code Coverage
+		
+		//Code starts for stage Install
+		stage('Install'){
+      steps{
+        sh 'mvn install -DskipTests'
+      }
+    }
+		//Code ends for stage Install
+		
+		//Code starts for stage Launch Tomcat Server
+		stage('Launch Tomcat Server'){
+      steps{
+        sh '/tmp/apache-tomcat-9.0.73/bin/startup.sh'
+      }
+    }
+		//Code ends for stage Launch Tomcat Server
 	
 	
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
