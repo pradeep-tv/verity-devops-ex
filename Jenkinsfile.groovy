@@ -62,6 +62,14 @@ pipeline {
     }
 		//Code ends for stage Launch Tomcat Server
 
+    //Code starts for Deploy War on Tomcat Server
+		stage('Deploy War on Tomcat Server'){
+      steps{
+        sh 'cp /var/jenkins_home/workspace/verity_devops_dxc/target/ExpenseApp-1.war /tmp/apache-tomcat-9.0.73/webapps'
+      }
+    }
+		//Code ends for stage Deploy War on Tomcat Server
+
     //Code starts for stage system tests
 		stage('Sysytem Test'){
       steps{
