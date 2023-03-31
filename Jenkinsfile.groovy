@@ -61,6 +61,15 @@ pipeline {
       }
     }
 		//Code ends for stage Launch Tomcat Server
+
+    //Code starts for stage system tests
+		stage('Sysytem Test'){
+      steps{
+        git url: 'https://github.com/pradeep-tv/EMSystemTests-ex.git'
+        sh 'mvn -Dtest=ExpenseManagerSystemTest test'
+      }
+    }
+		//Code ends for stage system tests
 	
 	
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
